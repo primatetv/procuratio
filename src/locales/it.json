@@ -1,0 +1,250 @@
+{
+    "common": {
+        "backToTop": "Torna su"
+    },
+    "nav": {
+        "home": "Home",
+        "about": "Chi Siamo",
+        "services": "Servizi",
+        "methodology": "Metodologia",
+        "contact": "Contatti"
+    },
+    "hero": {
+        "title": "SOLUZIONI PER <br /> INFRASTRUTTURE",
+        "subtitle": "Soluzioni complete in Project Management, Costruzioni e Servizi B2B. Ottimizziamo la vostra infrastruttura e gli asset immobiliari aziendali attraverso Amministrazione, Consulenza, Intermediazione e Valutazioni strategiche.",
+        "cta_services": "I NOSTRI SERVIZI",
+        "cta_contact": "CONTATTACI"
+    },
+    "footer": {
+        "desc": "Soluzioni complete per infrastrutture e servizi aziendali B2B. Ottimizziamo le vostre operazioni affinché possiate concentrarvi sul vostro business.",
+        "quickLinks": "Link Rapidi",
+        "contact": "Contatti",
+        "rights": "Procuratio. Tutti i diritti riservati."
+    },
+    "services": {
+        "label": "I NOSTRI SERVIZI",
+        "title": "COSA POSSIAMO FARE PER VOI",
+        "readMore": "LEGGI DI PIÙ",
+        "items": {
+            "proyectos-obras": {
+                "category": "INFRASTRUTTURA",
+                "title": "Gestione Progetti e Lavori",
+                "shortDesc": "Soluzioni concrete per massimizzare le opportunità nelle nuove costruzioni, ottimizzando uso, rendita e costi.",
+                "desc": [
+                    "L'obiettivo di questo servizio è fornire una soluzione concreta alle esigenze del Cliente quando si tratta di massimizzare le opportunità che si presentano con una nuova opera. Ci occupiamo dell'intero ciclo di vita del progetto, dalla concezione alla consegna finale.",
+                    "Il nostro approccio integrato assicura che ogni decisione tecnica e finanziaria sia allineata con gli obiettivi commerciali del committente."
+                ],
+                "benefits": [
+                    "Massimizzazione dell'uso e della redditività dello spazio.",
+                    "Analisi delle alternative e costi opportunità.",
+                    "Gestione integrata di progetti e costruzioni.",
+                    "Processi trasparenti e protezione contrattuale.",
+                    "Stretta supervisione di qualità e scadenze.",
+                    "Ottimizzazione del rapporto qualità/prezzo."
+                ]
+            },
+            "administracion": {
+                "category": "INFRASTRUTTURA",
+                "title": "Amministrazione",
+                "shortDesc": "Massimizzazione del rapporto qualità/valore, con gestione completa di fornitori, contratti e assicurazioni.",
+                "desc": [
+                    "Il servizio è orientato a massimizzare il rapporto tra qualità del servizio e valore, mantenendo i prezzi a un livello minimo, coerente con la qualità del servizio che il Cliente desidera ricevere.",
+                    "Il servizio è solitamente accompagnato da budget annuali e report di gestione amministrativa e operativa mensili, in modo che il Cliente sia sempre informato sulla situazione generale dei suoi immobili."
+                ],
+                "benefits": [
+                    "Selezione accurata e gestione dei fornitori.",
+                    "Amministrazione attiva di contratti e locazioni.",
+                    "Gestione delle assicurazioni e dei rischi operativi.",
+                    "Allineamento operativo fornitori-cliente.",
+                    "Implementazione di linee guida per il miglioramento continuo.",
+                    "Report di gestione mensili e annuali."
+                ]
+            },
+            "consultoria": {
+                "category": "INFRASTRUTTURA",
+                "title": "Consulenza Immobiliare",
+                "shortDesc": "Consulenza completa per la gestione, acquisto, affitto e valutazione di asset immobiliari.",
+                "desc": [
+                    "Avete problemi con la gestione degli immobili? Avete bisogno di uno strumento integrativo? Non siete sicuri se acquistare o affittare una proprietà? Cerchiamo di fornirvi la chiarezza necessaria per prendere decisioni informate.",
+                    "Dallo schema e approccio tradizionale di mercato alle proposte di lavoro/ incentivo più innovative per rappresentarvi in esclusiva, i cui vantaggi e benefici ripagano da soli i nostri onorari.",
+                    "Siamo nel settore immobiliare da oltre 30 anni: consultateci. Possiamo aiutarvi."
+                ],
+                "benefits": [
+                    "Valutazione precisa degli asset immobiliari.",
+                    "Consulenza acquisto vs affitto.",
+                    "Strategie di investimento e disinvestimento.",
+                    "Analisi di mercato e tendenze.",
+                    "Gestione di negoziazioni complesse.",
+                    "Rappresentanza esclusiva e personalizzata."
+                ]
+            }
+        }
+    },
+    "about": {
+        "label": "LA NOSTRA ESSENZA",
+        "title": "PARTNER STRATEGICO DI FIDUCIA",
+        "lead": "In <1>PROCURATIO</1>, combiniamo esperienza e professionalità per gestire i vostri asset con la massima efficienza.",
+        "text": "Siamo un'azienda locale di Servizi Infrastrutturali orientata alle grandi Corporazioni. Grazie al nostro lavoro di squadra, formazione e conoscenza del mercato, riusciamo a fornire combinazioni uniche di servizi di eccellenza, su misura.",
+        "mission": {
+            "title": "Missione",
+            "desc": "Gestione su misura, efficace ed efficiente."
+        },
+        "culture": {
+            "title": "Cultura",
+            "desc": "Servizio Totale e impegno assoluto."
+        },
+        "values": {
+            "title": "Valori",
+            "desc": "Trasparenza, Eccellenza e Responsabilità."
+        },
+        "cta": "SCOPRI DI PIÙ"
+    },
+    "impact": {
+        "title": "COSA I NOSTRI CLIENTI STANNO ASSUMENDO",
+        "stats": [
+            {
+                "label": "Gestione Progetti e Costruzioni",
+                "subLabel": "Gestione di progetti di costruzione e allestimento."
+            },
+            {
+                "label": "Amministrazione e Gestione Immobili",
+                "subLabel": "Gestione completa di asset e servizi."
+            },
+            {
+                "label": "Consulenza Immobiliare, Intermediazione, Valutazioni",
+                "subLabel": "Consulenza esperta in valutazioni e transazioni."
+            }
+        ],
+        "clientsTitle": "ALCUNI DEI NOSTRI CLIENTI"
+    },
+    "insights": {
+        "title": "Approfondimenti in Primo Piano",
+        "viewAll": "VEDI TUTTI",
+        "items": [
+            {
+                "category": "MERCATO",
+                "title": "Tendenze Infrastrutturali 2026",
+                "date": "GEN 20, 2026"
+            },
+            {
+                "category": "SOSTENIBILITÀ",
+                "title": "Strategie a Emissioni Zero",
+                "date": "GEN 15, 2026"
+            },
+            {
+                "category": "TECNOLOGIA",
+                "title": "Digitalizzazione degli Asset Immobiliari",
+                "date": "GEN 10, 2026"
+            }
+        ]
+    },
+    "serviceDetail": {
+        "notFound": "Servizio non trovato",
+        "backHome": "Torna alla Home",
+        "descTitle": "Descrizione del Servizio",
+        "whyChoose": "Perché sceglierci?",
+        "sidebar": {
+            "title": "Hai bisogno di consulenza?",
+            "subtitle": "Contatta i nostri specialisti per una valutazione personalizzata.",
+            "email": "Email",
+            "phone": "Telefono",
+            "schedule": "Orario",
+            "scheduleVal": "Lun - Ven, 9:00 - 18:00",
+            "cta": "Prenota Incontro"
+        },
+        "docs": {
+            "title": "Documentazione",
+            "brochure": "Brochure Aziendale"
+        }
+    },
+    "methodology": {
+        "title": "LA NOSTRA METODOLOGIA",
+        "steps": [
+            {
+                "title": "Rilevamento Esaustivo",
+                "desc": "Analisi scrupolosa della vostra problematica, documentazione e realtà operativa."
+            },
+            {
+                "title": "Analisi Completa",
+                "desc": "Identificazione dell'80% della problematica (Pareto) e convalida congiunta."
+            },
+            {
+                "title": "Soluzione Integrale",
+                "desc": "Combinazione unica di servizi su misura basata su esperienza e tecnologia."
+            }
+        ]
+    },
+    "testimonials": {
+        "title": "COSA DICONO I NOSTRI CLIENTI",
+        "items": [
+            {
+                "text": "Personalmente, lavorare con PROCURATIO è stata un'esperienza soddisfacente: la professionalità, l'impegno, lo sforzo, la creatività, la disponibilità e la trasparenza che hanno dimostrato nella fornitura dei loro servizi sono i pilastri su cui oggi poggia la fiducia riposta in loro.",
+                "author": "Edmundo Eluchans A.",
+                "role": "Legal Compliance Officer",
+                "company": "Compañía Sudamericana de Vapores"
+            },
+            {
+                "text": "Il valore dei servizi che PROCURATIO ci ha fornito ha superato quello dei loro obblighi contrattuali e professionali. Così, la loro gestione specializzata e il supporto permanente si sono concretizzati in benefici tangibili per il patrimonio della nostra Facoltà.",
+                "author": "Arturo Squella S.",
+                "role": "ex-Decano",
+                "company": "F. de Ciencias Químicas y Farmacéuticas - Univ. Chile"
+            },
+            {
+                "text": "La sfida in materia di infrastrutture per la nostra nuova sede centrale aveva parametri aziendali piuttosto rigidi in termini di tempo, investimenti e standard, che dovevano essere rispettati nei tempi e nei modi previsti: i servizi forniti da PROCURATIO sono stati fondamentali per raggiungere tale obiettivo.",
+                "author": "Francisco Tomic E.",
+                "role": "ex-Presidente",
+                "company": "Panaust South America"
+            },
+            {
+                "text": "Il servizio fornito dal team di PROCURATIO è stato un contributo importante al raggiungimento dei nostri obiettivi. Con esperienza, flessibilità e contatto permanente, hanno sempre collaborato con noi, supportandoci nelle sfide che la dinamica della nostra attività abitualmente pone.",
+                "author": "Eduardo Brunetti V.",
+                "role": "Presidente",
+                "company": "CIO - Consultoría Integral Operativa"
+            }
+        ]
+    },
+    "contact": {
+        "title": "Contattaci",
+        "form": {
+            "title": "Inviaci un messaggio",
+            "subtitle": "Siamo pronti ad ascoltare le tue esigenze.",
+            "name": "Nome",
+            "namePlaceholder": "Il Tuo Nome",
+            "email": "Email",
+            "emailPlaceholder": "tuaemail@azienda.com",
+            "message": "Messaggio",
+            "messagePlaceholder": "Come possiamo aiutarti?",
+            "submit": "Invia Messaggio",
+            "submitting": "Invio in corso...",
+            "success": "Messaggio inviato (simulazione)"
+        },
+        "faq": {
+            "title": "Domande Frequenti",
+            "items": [
+                {
+                    "question": "Che tipo di Clienti lavorano con Procuratio?",
+                    "answer": "I nostri Clienti appartengono a diversi settori: industriale, minerario, edile, finanziario ed educativo. I nostri servizi sono pensati quasi esclusivamente per Aziende e/o Corporazioni."
+                },
+                {
+                    "question": "Cosa significa: Servizi B2B Non-Core?",
+                    "answer": "Sono servizi orientati esclusivamente alle Aziende, progettati per supportare quelle aree che non sono proprie né centrali dell'attività principale dei nostri Clienti."
+                },
+                {
+                    "question": "Avete uno standard di consegna?",
+                    "answer": "I nostri servizi sono su misura. Definiamo con ogni Cliente gli standard di risposta, qualità, quantità e tempi di consegna in base alle loro esigenze specifiche."
+                },
+                {
+                    "question": "Potete fornire tutti i servizi contemporaneamente?",
+                    "answer": "Sì, possiamo. Siamo nati come integratori di servizi non-core e tutti sono integrati nella nostra gestione amministrativa."
+                }
+            ]
+        }
+    },
+    "meta": {
+        "title": "Procuratio | Soluzioni per Infrastrutture e Servizi B2B",
+        "description": "Procuratio: Soluzioni per Infrastrutture, Gestione Progetti e Servizi B2B Non-Core su misura. Massimizza la tua efficienza operativa."
+    },
+    "whatsapp": {
+        "ariaLabel": "Contattaci su WhatsApp"
+    }
+}

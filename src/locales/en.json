@@ -1,0 +1,250 @@
+{
+    "common": {
+        "backToTop": "Back to Top"
+    },
+    "nav": {
+        "home": "Home",
+        "about": "About Us",
+        "services": "Services",
+        "methodology": "Methodology",
+        "contact": "Contact"
+    },
+    "hero": {
+        "title": "INFRASTRUCTURE <br /> SOLUTIONS",
+        "subtitle": "Comprehensive solutions in Project Management, Construction, and B2B Services. We optimize your corporate infrastructure and real estate assets through Strategic Administration, Consulting, Brokerage, and Appraisals.",
+        "cta_services": "OUR SERVICES",
+        "cta_contact": "CONTACT US"
+    },
+    "footer": {
+        "desc": "Comprehensive infrastructure solutions and B2B corporate services. We optimize your operations so you can focus on your business.",
+        "quickLinks": "Quick Links",
+        "contact": "Contact",
+        "rights": "Procuratio. All rights reserved."
+    },
+    "services": {
+        "label": "OUR SERVICES",
+        "title": "WHAT WE CAN DO FOR YOU",
+        "readMore": "READ MORE",
+        "items": {
+            "proyectos-obras": {
+                "category": "INFRASTRUCTURE",
+                "title": "Project & Construction Management",
+                "shortDesc": "Concrete solutions to maximize opportunities in new construction, optimizing use, rent, and costs.",
+                "desc": [
+                    "The objective of this service is to provide a concrete solution to the Client's requirements when it comes to maximizing opportunities in new construction projects. We take care of the entire project lifecycle, from conception to final delivery.",
+                    "Our comprehensive approach ensures that every technical and financial decision aligns with the client's business objectives."
+                ],
+                "benefits": [
+                    "Maximization of space use and profitability.",
+                    "Analysis of alternatives and opportunity costs.",
+                    "Integrated project and construction management.",
+                    "Transparent processes and contractual protection.",
+                    "Tight supervision of quality and deadlines.",
+                    "Optimization of the quality/price ratio."
+                ]
+            },
+            "administracion": {
+                "category": "INFRASTRUCTURE",
+                "title": "Administration",
+                "shortDesc": "Maximizing the quality/value ratio with comprehensive management of suppliers, contracts, and insurance.",
+                "desc": [
+                    "This service is oriented towards maximizing the ratio between service quality and value, taking care to keep prices at a minimum level, consistent with the service quality the Client wishes to receive.",
+                    "The service is habitually accompanied by annual budgets and monthly administrative and operational management reports, so the Client is always informed of the general situation of their properties."
+                ],
+                "benefits": [
+                    "Careful selection and management of suppliers.",
+                    "Active administration of contracts and leases.",
+                    "Management of insurance and operational risks.",
+                    "Operational alignment between suppliers and client.",
+                    "Implementation of continuous improvement guidelines.",
+                    "Monthly and annual management reports."
+                ]
+            },
+            "consultoria": {
+                "category": "INFRASTRUCTURE",
+                "title": "Real Estate Consulting",
+                "shortDesc": "Comprehensive advice for the management, purchase, lease, and valuation of real estate assets.",
+                "desc": [
+                    "Having problems with property management? Need an integrating tool? Not sure whether to buy or lease a property? We seek to provide you with the necessary clarity to make informed decisions.",
+                    "From the traditional market scheme and approach to the most innovative work/incentive proposals to represent you exclusively, whose advantages and benefits repay our fees by themselves.",
+                    "We have been in the real estate business for over 30 years: consult us. We can help you."
+                ],
+                "benefits": [
+                    "Precise valuation of real estate assets.",
+                    "Advice on purchase vs. lease.",
+                    "Investment and divestment strategies.",
+                    "Market analysis and trends.",
+                    "Management of complex negotiations.",
+                    "Exclusive and personalized representation."
+                ]
+            }
+        }
+    },
+    "about": {
+        "label": "OUR ESSENCE",
+        "title": "TRUSTED STRATEGIC PARTNER",
+        "lead": "At <1>PROCURATIO</1>, we combine experience and professionalism to manage your assets with maximum efficiency.",
+        "text": "We are a local Infrastructure Services company oriented towards large Corporations. Thanks to our teamwork, training, and market knowledge, we achieve unique combinations of excellence services, made to measure.",
+        "mission": {
+            "title": "Mission",
+            "desc": "Tailored, effective, and efficient management."
+        },
+        "culture": {
+            "title": "Culture",
+            "desc": "Total Service and absolute commitment."
+        },
+        "values": {
+            "title": "Values",
+            "desc": "Transparency, Excellence, and Responsibility."
+        },
+        "cta": "LEARN MORE"
+    },
+    "impact": {
+        "title": "WHAT OUR CLIENTS ARE HIRING",
+        "stats": [
+            {
+                "label": "Project & Construction Management",
+                "subLabel": "Management of construction and fit-out projects."
+            },
+            {
+                "label": "Property Management & Operations",
+                "subLabel": "Comprehensive asset and service management."
+            },
+            {
+                "label": "Real Estate Consulting, Brokerage, Appraisals",
+                "subLabel": "Expert advice on valuation and transactions."
+            }
+        ],
+        "clientsTitle": "SOME OF OUR CLIENTS"
+    },
+    "insights": {
+        "title": "FEATURED INSIGHTS",
+        "viewAll": "VIEW ALL",
+        "items": [
+            {
+                "category": "MARKET",
+                "title": "Infrastructure Trends 2026",
+                "date": "JAN 20, 2026"
+            },
+            {
+                "category": "SUSTAINABILITY",
+                "title": "Carbon Neutral Strategies",
+                "date": "JAN 15, 2026"
+            },
+            {
+                "category": "TECHNOLOGY",
+                "title": "Digitalization of Real Estate Assets",
+                "date": "JAN 10, 2026"
+            }
+        ]
+    },
+    "serviceDetail": {
+        "notFound": "Service not found",
+        "backHome": "Back to Home",
+        "descTitle": "Service Description",
+        "whyChoose": "Why Choose Us?",
+        "sidebar": {
+            "title": "Need Advice?",
+            "subtitle": "Contact our specialists for a personalized evaluation.",
+            "email": "Email",
+            "phone": "Phone",
+            "schedule": "Schedule",
+            "scheduleVal": "Mon - Fri, 9:00 - 18:00",
+            "cta": "Schedule Meeting"
+        },
+        "docs": {
+            "title": "Documentation",
+            "brochure": "Corporate Brochure"
+        }
+    },
+    "methodology": {
+        "title": "OUR METHODOLOGY",
+        "steps": [
+            {
+                "title": "Exhaustive Survey",
+                "desc": "Scrupulous analysis of your problem, documentation, and operational reality."
+            },
+            {
+                "title": "Complete Analysis",
+                "desc": "Identification of 80% of the problem (Pareto) and joint validation."
+            },
+            {
+                "title": "Comprehensive Solution",
+                "desc": "Unique combination of tailored services based on experience and technology."
+            }
+        ]
+    },
+    "testimonials": {
+        "title": "WHAT OUR CLIENTS SAY",
+        "items": [
+            {
+                "text": "Personally, working with PROCURATIO has been a satisfactory experience: the professionalism, commitment, effort, creativity, availability, and transparency they have demonstrated in providing their services are the pillars on which the trust placed in them rests today.",
+                "author": "Edmundo Eluchans A.",
+                "role": "Legal Compliance Officer",
+                "company": "Compañía Sudamericana de Vapores"
+            },
+            {
+                "text": "The value of the services PROCURATIO has provided us has exceeded their contractual and professional obligations. Thus, their specialized management and permanent support have materialized in tangible benefits for the assets of our Faculty.",
+                "author": "Arturo Squella S.",
+                "role": "Former Dean",
+                "company": "F. of Chemical and Pharmaceutical Sciences - Univ. Chile"
+            },
+            {
+                "text": "The infrastructure challenge for our new headquarters had quite rigid corporate parameters regarding time, investment, and standards, which had to be met in a timely manner: the services PROCURATIO provided us were key to achieving that goal.",
+                "author": "Francisco Tomic E.",
+                "role": "Former President",
+                "company": "Panaust South America"
+            },
+            {
+                "text": "The service provided by the PROCURATIO team has been an important contribution to achieving our goals. With experience, flexibility, and permanent contact, they have always collaborated with us, supporting us in the challenges that the dynamics of our activity habitually pose.",
+                "author": "Eduardo Brunetti V.",
+                "role": "President",
+                "company": "CIO - Consultoría Integral Operativa"
+            }
+        ]
+    },
+    "contact": {
+        "title": "Contact Us",
+        "form": {
+            "title": "Send us a message",
+            "subtitle": "We are ready to listen to your needs.",
+            "name": "Name",
+            "namePlaceholder": "Your Name",
+            "email": "Email",
+            "emailPlaceholder": "youremail@company.com",
+            "message": "Message",
+            "messagePlaceholder": "How can we help you?",
+            "submit": "Send Message",
+            "submitting": "Sending...",
+            "success": "Message sent (simulation)"
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "items": [
+                {
+                    "question": "What type of Clients work with Procuratio?",
+                    "answer": "Our Clients belong to diverse industries: industrial, mining, construction, financial, and educational. Our services are designed almost exclusively for Companies and/or Corporations."
+                },
+                {
+                    "question": "What does B2B Non-Core Services mean?",
+                    "answer": "They are services exclusively oriented to Companies, designed to support those areas that are not own or central to the main business of our Clients."
+                },
+                {
+                    "question": "Do you have a delivery standard?",
+                    "answer": "Our services are made to measure. We define with each Client the standards of response, quality, quantity, and delivery times according to their specific needs."
+                },
+                {
+                    "question": "Can you provide all services simultaneously?",
+                    "answer": "Yes, we can. We were born as an integrator of non-core services and all of them are integrated into our administration management."
+                }
+            ]
+        }
+    },
+    "meta": {
+        "title": "Procuratio | Infrastructure Solutions and B2B Services",
+        "description": "Procuratio: Infrastructure Solutions, Project Management, and tailored B2B Non-Core Services. Maximize your operational efficiency."
+    },
+    "whatsapp": {
+        "ariaLabel": "Contact via WhatsApp"
+    }
+}
