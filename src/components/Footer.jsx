@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Mail, Phone, MapPin, Linkedin, Building2 } from 'lucide-react';
+import logoBlanco from '../assets/logo_blanco.png';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -21,7 +22,7 @@ const Footer = () => {
         <div className="footer-grid">
           <div className="footer-brand">
             <Link to="/" className="footer-logo-link">
-              <img src="/src/assets/logo_blanco.png" alt="Procuratio" className="footer-logo" />
+              <img src={logoBlanco} alt="Procuratio" className="footer-logo" />
             </Link>
             <p className="footer-desc">
               {t('footer.desc')}

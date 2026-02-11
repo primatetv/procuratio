@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 import { Target, Heart, Users, Award } from 'lucide-react';
+import serviceCorp from '../assets/service-corp.png';
 
 const About = () => {
   const { t } = useTranslation();
@@ -49,7 +50,7 @@ const About = () => {
           </div>
 
           <div className="about-image">
-            <img src="/src/assets/service-corp.png" alt="Corporate Team" />
+            <img src={serviceCorp} alt="Corporate Team" />
             <div className="image-accent-box"></div>
           </div>
         </div>

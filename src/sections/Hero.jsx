@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight } from 'lucide-react';
+import heroBgVideo from '../assets/hero-bg.mp4';
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -14,7 +15,7 @@ const Hero = () => {
           playsInline
           className="hero-video"
         >
-          <source src="/src/assets/hero-bg.mp4" type="video/mp4" />
+          <source src={heroBgVideo} type="video/mp4" />
         </video>
         <div className="hero-overlay-dark"></div>
       </div>

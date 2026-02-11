@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Menu, X, Search } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -33,7 +34,7 @@ const Navbar = () => {
       <div className="container nav-container">
         {/* Logo */}
         <Link to="/" className="logo-link">
-          <img src="/src/assets/logo.png" alt="Procuratio" className="logo-img" />
+          <img src={logo} alt="Procuratio" className="logo-img" />
         </Link>
 
         {/* Desktop Menu */}
