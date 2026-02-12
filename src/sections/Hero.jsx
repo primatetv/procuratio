@@ -161,14 +161,17 @@ const Hero = () => {
             margin-left: 1rem;
             margin-right: 1rem;
             max-width: none;
-            padding: 2rem;
+            padding: 1.5rem; /* Reduced padding */
             margin-bottom: 3rem;
             background: white;
             box-shadow: 0 10px 20px rgba(0,0,0,0.05);
           }
 
           .hero-title {
-            font-size: 2rem;
+            font-size: 1.25rem; /* Drastically reduced font size */
+            overflow-wrap: break-word; /* Ensure long words break */
+            word-wrap: break-word;
+            hyphens: auto; /* Allow hyphenation */
           }
 
           .hero-actions {
