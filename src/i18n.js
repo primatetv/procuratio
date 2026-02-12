@@ -16,6 +16,12 @@ i18n
     .init({
         debug: true,
         fallbackLng: 'es',
+        // default to 'es' if no language is detected or stored
+        // order: ['localStorage', 'cookie'] ensures we check storage first, but skip 'navigator' to avoid browser language
+        detection: {
+            order: ['localStorage', 'cookie'],
+            caches: ['localStorage', 'cookie'],
+        },
         interpolation: {
             escapeValue: false, // not needed for react as it escapes by default
         },
