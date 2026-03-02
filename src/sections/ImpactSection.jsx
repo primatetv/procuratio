@@ -1,7 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-
 const CircularProgress = ({ value, label, subLabel, color = "#D4AF37" }) => {
     const [progress, setProgress] = useState(0);
     const radius = 60;
@@ -87,18 +85,9 @@ import ameis from '../assets/clients/ameis.png';
 
 const ClientLogos = () => {
     const scrollRef = useRef(null);
-
-    const scroll = (direction) => {
-        const { current } = scrollRef;
-        if (current) {
-            const scrollAmount = 300;
-            if (direction === 'left') {
-                current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-            } else {
-                current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-            }
-        }
-    };
+    const [isDragging, setIsDragging] = useState(false);
+    const [startX, setStartX] = useState(0);
+    const [scrollLeftState, setScrollLeftState] = useState(0);
 
     const clients = [
         { name: "Credicorp Capital", img: credicorp },
@@ -120,31 +109,84 @@ const ClientLogos = () => {
         { name: "Ameis", img: ameis },
     ];
 
+    const duplicatedClients = [...clients, ...clients];
+
+    useEffect(() => {
+        let animationId;
+        const container = scrollRef.current;
+        if (!container) return;
+
+        const scrollStep = () => {
+            if (!isDragging) {
+                container.scrollLeft += 1;
+                // If it reaches halfway (one full set), seamlessly reset
+                if (container.scrollLeft >= container.scrollWidth / 2) {
+                    container.scrollLeft -= container.scrollWidth / 2;
+                }
+            }
+            animationId = requestAnimationFrame(scrollStep);
+        };
+
+        animationId = requestAnimationFrame(scrollStep);
+
+        return () => cancelAnimationFrame(animationId);
+    }, [isDragging]);
+
+    const handleMouseDown = (e) => {
+        setIsDragging(true);
+        setStartX(e.pageX - scrollRef.current.offsetLeft);
+        setScrollLeftState(scrollRef.current.scrollLeft);
+    };
+
+    const handleMouseLeave = () => {
+        setIsDragging(false);
+    };
+
+    const handleMouseUp = () => {
+        setIsDragging(false);
+    };
+
+    const handleMouseMove = (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - scrollRef.current.offsetLeft;
+        const walk = (x - startX) * 1.5; // Drag speed
+        const container = scrollRef.current;
+
+        let newScrollLeft = scrollLeftState - walk;
+        const halfWidth = container.scrollWidth / 2;
+
+        // Wrap logic for infinite dragging feel
+        if (newScrollLeft <= 0) {
+            newScrollLeft += halfWidth;
+            setStartX(e.pageX - container.offsetLeft);
+            setScrollLeftState(newScrollLeft);
+        } else if (newScrollLeft >= halfWidth * 2) {
+            newScrollLeft -= halfWidth;
+            setStartX(e.pageX - container.offsetLeft);
+            setScrollLeftState(newScrollLeft);
+        }
+
+        container.scrollLeft = newScrollLeft;
+    };
+
     return (
         <div className="client-logos-wrapper relative">
-            <button
-                className="nav-btn prev-btn"
-                onClick={() => scroll('left')}
-                aria-label="Previous"
+            <div
+                className={`logos-scroll-container ${isDragging ? 'dragging' : ''}`}
+                ref={scrollRef}
+                onMouseDown={handleMouseDown}
+                onMouseLeave={handleMouseLeave}
+                onMouseUp={handleMouseUp}
+                onMouseMove={handleMouseMove}
             >
-                <ChevronLeft size={24} />
-            </button>
-
-            <button
-                className="nav-btn next-btn"
-                onClick={() => scroll('right')}
-                aria-label="Next"
-            >
-                <ChevronRight size={24} />
-            </button>
-
-            <div className="logos-scroll-container" ref={scrollRef}>
-                {clients.map((client, index) => (
+                {duplicatedClients.map((client, index) => (
                     <div key={index} className="logo-item">
                         <img
                             src={client.img}
                             alt={client.name}
                             className="client-logo-img"
+                            draggable="false"
                         />
                     </div>
                 ))}
@@ -279,7 +321,7 @@ const ImpactSection = () => {
 
                 .client-logos-wrapper {
                     position: relative;
-                    padding: 0 3rem; /* Revert to normal padding */
+                    padding: 0; /* Remove padding since no buttons */
                 }
 
                 .logos-scroll-container {
@@ -287,15 +329,18 @@ const ImpactSection = () => {
                     align-items: center;
                     gap: 1rem; /* Smaller gap */
                     overflow-x: auto;
-                    scroll-behavior: smooth;
                     scrollbar-width: none;
                     -ms-overflow-style: none;
                     padding: 1rem 0;
-                    scroll-snap-type: x mandatory;
+                    cursor: grab;
                     
                     /* Fade out edges to prevent hard cut */
                     mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
                     -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+                }
+
+                .logos-scroll-container.dragging {
+                    cursor: grabbing;
                 }
 
                 .logos-scroll-container::-webkit-scrollbar {
@@ -311,8 +356,8 @@ const ImpactSection = () => {
                     opacity: 0.8;
                     transition: all 0.3s ease;
                     filter: none;
-                    scroll-snap-align: center;
                     padding: 0 1rem;
+                    user-select: none; /* Prevent selection while dragging */
                 }
 
                 .logo-item:hover {
@@ -334,38 +379,6 @@ const ImpactSection = () => {
                 
                 .logo-item:hover .client-logo-img {
                     filter: none; /* Show original color on hover */
-                }
-
-                .nav-btn {
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    background-color: var(--color-secondary);
-                    color: white;
-                    border: none;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    cursor: pointer;
-                    z-index: 10;
-                    transition: all 0.2s ease;
-                }
-
-                .nav-btn:hover {
-                    background-color: white;
-                    color: var(--color-primary);
-                    transform: translateY(-50%) scale(1.1);
-                }
-
-                .prev-btn {
-                    left: 0;
-                }
-
-                .next-btn {
-                    right: 0;
                 }
             `}</style>
         </section>
