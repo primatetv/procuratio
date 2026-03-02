@@ -42,12 +42,12 @@ const Hero = () => {
       <style>{`
         .hero-section {
           position: relative;
-          height: 90vh; /* Tall hero */
+          height: 100vh; /* Stretch to top */
           min-height: 600px;
           display: flex;
           align-items: center;
           padding: 0;
-          margin-top: 80px; /* Navbar offset */
+          margin-top: 0; /* Remove navbar offset so it overlaps */
           overflow: hidden;
         }
 

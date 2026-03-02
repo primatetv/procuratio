@@ -30,7 +30,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''} ${isHome && !scrolled ? 'transparent' : ''}`}>
       <div className="container nav-container">
         {/* Logo */}
         <Link to="/" className="logo-link">
@@ -112,7 +112,35 @@ const Navbar = () => {
           height: 80px;
           display: flex;
           align-items: center;
-          transition: box-shadow 0.3s ease;
+          transition: all 0.3s ease;
+        }
+        
+        .navbar.transparent {
+          background: transparent;
+          border-bottom: none;
+          box-shadow: none;
+        }
+
+        .navbar.transparent .nav-link {
+          color: white;
+        }
+
+        .navbar.transparent .nav-link::after {
+          background-color: white;
+        }
+
+        .navbar.transparent .logo-img {
+          filter: brightness(0) invert(1);
+        }
+
+        .navbar.transparent .icon-btn,
+        .navbar.transparent .mobile-menu-btn,
+        .navbar.transparent .globe-btn {
+          color: white;
+        }
+
+        .navbar.transparent .nav-utilities {
+          border-left: none;
         }
 
         .navbar.scrolled {
