@@ -66,7 +66,7 @@ const About = () => {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
-            align-items: center;
+            align-items: stretch; /* Stretch to make both columns equal height */
         }
 
         .section-label {
@@ -124,7 +124,8 @@ const About = () => {
 
         .about-image {
             position: relative;
-            height: 600px;
+            height: 100%; /* Take full height of stretched grid cell */
+            min-height: 400px; /* Ensure a minimum height on mobile */
         }
 
         .about-image img {
@@ -134,6 +135,7 @@ const About = () => {
             position: relative;
             z-index: 2;
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-radius: 16px; /* Rounded corners */
         }
 
         .image-accent-box {
@@ -144,6 +146,7 @@ const About = () => {
             height: 50%;
             background-color: var(--color-bg-light);
             z-index: 1;
+            border-radius: 16px;
         }
 
         @media (max-width: 900px) {
@@ -153,6 +156,7 @@ const About = () => {
             .about-image {
                 height: 400px;
                 order: -1;
+                min-height: auto;
             }
         }
       `}</style>

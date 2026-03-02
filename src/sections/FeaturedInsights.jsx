@@ -68,15 +68,24 @@ const FeaturedInsights = () => {
         }
 
         .insight-card {
-            background: transparent;
+            background: white;
             cursor: pointer;
-            group: ;
+            display: flex;
+            flex-direction: column;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .insight-card:hover {
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
         }
 
         .insight-image {
             height: 250px;
             overflow: hidden;
-            margin-bottom: 1.5rem;
         }
 
         .insight-image img {
@@ -88,6 +97,13 @@ const FeaturedInsights = () => {
 
         .insight-card:hover .insight-image img {
             transform: scale(1.05);
+        }
+
+        .insight-content {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .insight-meta {

@@ -67,6 +67,8 @@ const Services = () => {
             transition: all 0.3s ease;
             cursor: pointer;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-radius: 16px;
+            overflow: hidden;
         }
 
         .service-card:hover {

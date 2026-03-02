@@ -91,6 +91,8 @@ const Hero = () => {
           pointer-events: auto;
           box-shadow: 0 15px 30px rgba(0,0,0,0.1);
           border-left: 10px solid var(--color-primary);
+          border-radius: 16px;
+          overflow: hidden;
         }
 
         /* Animation: Slide from Left */
