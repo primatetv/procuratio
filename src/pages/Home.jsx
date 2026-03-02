@@ -16,7 +16,7 @@ const Home = () => {
         if (location.hash) {
             const element = document.querySelector(location.hash);
             if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
+                element.scrollIntoView({ behavior: 'auto' });
             }
         } else {
             window.scrollTo(0, 0);

@@ -227,7 +227,6 @@ const Navbar = () => {
         .contact-btn {
           padding: 0.6rem 1.2rem;
           font-size: 0.8rem;
-          border-radius: 0;
         }
 
         .mobile-menu-btn {

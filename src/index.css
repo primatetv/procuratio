@@ -31,8 +31,8 @@
   /* Generous spacing */
 
   /* Shapes */
-  --border-radius: 0px;
-  /* Sharp corners */
+  --border-radius: 10px;
+  /* Rounded corners */
 }
 
 * {
