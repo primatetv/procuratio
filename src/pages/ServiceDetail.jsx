@@ -123,13 +123,13 @@ const ServiceDetail = () => {
                                     </div>
                                 </a>
 
-                                <a href="tel:+56912345678" className="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-50 transition-colors group border border-transparent hover:border-gray-200">
+                                <a href="tel:+56971076011" className="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-50 transition-colors group border border-transparent hover:border-gray-200">
                                     <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-600 group-hover:bg-green-600 group-hover:text-white transition-colors">
                                         <Phone size={18} />
                                     </div>
                                     <div>
                                         <p className="text-xs text-gray-400 font-bold uppercase tracking-wider">{t('serviceDetail.sidebar.phone')}</p>
-                                        <p className="text-sm font-semibold text-gray-700">+56 9 1234 5678</p>
+                                        <p className="text-sm font-semibold text-gray-700">+56 9 7107 6011</p>
                                     </div>
                                 </a>
 

@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 const WhatsAppButton = () => {
     const { t } = useTranslation();
-    const phoneNumber = "56912345678"; // Using the number from Footer
+    const phoneNumber = "56971076011"; // Using the number from Footer
     const whatsappUrl = `https://wa.me/${phoneNumber}`;
     const [isVisible, setIsVisible] = useState(false);
 
