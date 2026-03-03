@@ -7,6 +7,8 @@ import BackToTop from './components/BackToTop';
 import WhatsAppButton from './components/WhatsAppButton';
 import Home from './pages/Home';
 import ServiceDetail from './pages/ServiceDetail';
+import Insights from './pages/Insights';
+import InsightDetail from './pages/InsightDetail';
 
 function App() {
   const { t } = useTranslation();
@@ -23,6 +25,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/service/:id" element={<ServiceDetail />} />
+          <Route path="/insights" element={<Insights />} />
+          <Route path="/insights/:id" element={<InsightDetail />} />
         </Routes>
         <WhatsAppButton />
         <Footer />

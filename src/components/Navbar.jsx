@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Menu, X, Search } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
 import logo from '../assets/logo.png';
+import logoWhite from '../assets/logo_blanco2.png';
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -34,7 +35,7 @@ const Navbar = () => {
       <div className="container nav-container">
         {/* Logo */}
         <Link to="/" className="logo-link">
-          <img src={logo} alt="Procuratio" className="logo-img" />
+          <img src={isHome && !scrolled ? logoWhite : logo} alt="Procuratio" className="logo-img" />
         </Link>
 
         {/* Desktop Menu */}
@@ -129,9 +130,7 @@ const Navbar = () => {
           background-color: white;
         }
 
-        .navbar.transparent .logo-img {
-          filter: brightness(0) invert(1);
-        }
+
 
         .navbar.transparent .icon-btn,
         .navbar.transparent .mobile-menu-btn,

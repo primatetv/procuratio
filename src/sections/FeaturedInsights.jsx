@@ -1,38 +1,78 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight } from 'lucide-react';
+import { client, urlFor } from '../sanity';
 
 const FeaturedInsights = () => {
-    const { t } = useTranslation();
-    const insights = t('insights.items', { returnObjects: true });
+    const { t, i18n } = useTranslation();
+    const [posts, setPosts] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        const currentLang = i18n.language || 'es';
+
+        // Fetch up to 3 posts from Sanity matching the active locale
+        const query = `*[_type == "post" && (language == $lang || (!defined(language) && $lang == 'es'))] | order(publishedAt desc)[0...3] { 
+            _id, title, slug, publishedAt, mainImage, categories[]->{title} 
+        }`;
+
+        client.fetch(query, { lang: currentLang })
+            .then((data) => {
+                setPosts(data);
+                setIsLoading(false);
+            })
+            .catch((error) => {
+                console.error("Error fetching featured posts:", error);
+                setIsLoading(false);
+            });
+    }, [i18n.language]);
+
+    const fallbackImages = [
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800"
+    ];
 
     return (
         <section className="insights-section">
             <div className="container">
                 <div className="section-header-flex">
                     <h2 className="section-title" style={{ marginBottom: 0 }}>{t('insights.title')}</h2>
-                    <a href="#" className="view-all-link">{t('insights.viewAll')} <ArrowRight size={16} /></a>
+                    <Link to="/insights" className="view-all-link">{t('insights.viewAll')} <ArrowRight size={16} /></Link>
                 </div>
 
                 <div className="insights-grid">
-                    {Array.isArray(insights) && insights.map((item, index) => (
-                        <div key={index} className="insight-card">
-                            <div className="insight-image">
-                                <img src={[
-                                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800",
-                                    "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
-                                    "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800"
-                                ][index]} alt={item.title} />
-                            </div>
-                            <div className="insight-content">
-                                <div className="insight-meta">
-                                    <span className="insight-cat">{item.category}</span>
-                                    <span className="insight-date">{item.date}</span>
-                                </div>
-                                <h3 className="insight-title">{item.title}</h3>
-                            </div>
+                    {isLoading ? (
+                        <div className="col-span-full flex justify-center items-center py-10">
+                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[var(--color-primary)]"></div>
                         </div>
-                    ))}
+                    ) : posts.length === 0 ? (
+                        <div className="col-span-full text-center py-10 text-gray-500">
+                            Aún no hay artículos destacados. <br /> Publica desde el panel Sanity Studio.
+                        </div>
+                    ) : (
+                        posts.map((post, index) => {
+                            const postImageUrl = post.mainImage ? urlFor(post.mainImage).width(800).url() : fallbackImages[index % fallbackImages.length];
+                            const postDate = post.publishedAt ? new Date(post.publishedAt).toLocaleDateString() : 'Proximamente';
+                            const category = post.categories && post.categories.length > 0 ? post.categories[0].title : 'General';
+
+                            return (
+                                <Link to={`/insights/${post.slug?.current}`} key={post._id} className="insight-card">
+                                    <div className="insight-image">
+                                        <img src={postImageUrl} alt={post.title} />
+                                    </div>
+                                    <div className="insight-content">
+                                        <div className="insight-meta">
+                                            <span className="insight-cat">{category}</span>
+                                            <span className="insight-date">{postDate}</span>
+                                        </div>
+                                        <h3 className="insight-title">{post.title}</h3>
+                                    </div>
+                                </Link>
+                            );
+                        })
+                    )}
                 </div>
             </div>
 
@@ -65,6 +105,12 @@ const FeaturedInsights = () => {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
+            min-height: 200px;
+        }
+        
+        /* col-span-full for empty/loading states */
+        .col-span-full {
+             grid-column: 1 / -1;
         }
 
         .insight-card {
@@ -76,6 +122,7 @@ const FeaturedInsights = () => {
             overflow: hidden;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
             transition: all 0.3s ease;
+            text-decoration: none;
         }
 
         .insight-card:hover {
